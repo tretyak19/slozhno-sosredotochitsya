@@ -2,4 +2,127 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  margin: auto;
+  width: 375px;
+}
+
+.header {
+  display: grid;
+}
+
+.decorated-zone::before { /*Декоративный элемент вверху*/
+  content: "";
+  display: block;
+  position: relative;
+  justify-self: end;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::after { /*Декоративный элемент внизу*/
+  content: "";
+  display: block;
+  position: relative;
+  justify-self: start;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+}
+
+.header__decoration {
+  gap: 10px;
+  right: 29px;
+  top: 28px;
+}
+
+.header__decoration::before {
+  position: absolute;
+  content: 'rec';
+  text-transform: uppercase;
+  color: var(--accent-color);
+  line-height: 25px;
+  top: 20px;
+  right: 50px;
+}
+
+.header__decoration::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  top: 28px;
+  right: 29px;
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+/*.header__decoration {  
+  display: flex;
+  position: absolute;
+  justify-self: end;
+  margin-block-start: 10px;
+  margin-inline-end: 10px;
+  width: 52px;
+  height: 26px;
+}
+
+.header__decoration::before {  
+  display: flex;
+  position: relative;
+  align-self: center;
+  justify-self: start;
+  content: 'rec';
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-size: var(--normal-fotn-size);
+  color: var(--accent-color);
+}
+
+.header__decoration::after { 
+  display: flex;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  content: '';
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  align-self: center;
+  justify-self: end;
+}
+
+/*.header__decoration::before {
+  display: block;
+  position: relative;
+  content: "rec";
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-size: var(--normal-font-size);
+  color: var(--accent-color);
+}
+
+.header__decoration::after {
+  display: block;
+  position: relative;
+  justify-self: end;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background: var(--accent-color);
+  filter: drop-shadow(0 0 4px var(--accent-color));
+}*/
+
+
+.header__theme-menu-list {
+  display: grid;
+  list-style-type: none;
+  width: 70px;
+  height: 98px;
 }
